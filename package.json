@@ -15,7 +15,8 @@
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "@metric-atlas/vite": "^0.1.0",
+    "@metric-atlas/cli": "^0.1.1",
+    "@metric-atlas/vite": "^0.1.1",
     "@types/mixpanel-browser": "^2.60.0",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",

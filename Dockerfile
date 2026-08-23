@@ -1,9 +1,9 @@
 # Deploys this consumer project (Metric-Atlas-homepage) exactly the way any
-# external team would: install @metric-atlas/vite (already a devDependency)
-# plus @metric-atlas/cli from npm, build with the Vite plugin enabled, then
-# serve the result with `metric-atlas serve` — one origin for the site, the
-# Runtime API, and the bundled Analytics Health Dashboard
-# (/__metric-atlas/dashboard, see Metric-Atlas ADR-009).
+# external team would: @metric-atlas/vite and @metric-atlas/cli are both real
+# devDependencies (npm install @metric-atlas/vite @metric-atlas/cli), built
+# with the Vite plugin enabled, then served with `metric-atlas serve` — one
+# origin for the site, the Runtime API, and the bundled Analytics Health
+# Dashboard (/__metric-atlas/dashboard, see Metric-Atlas ADR-009).
 #
 # GA4 credentials are supplied at container start via environment variables
 # (METRIC_ATLAS_GA4_PROPERTY_ID + METRIC_ATLAS_GA4_SERVICE_ACCOUNT_JSON_BASE64),
@@ -15,7 +15,6 @@ WORKDIR /app
 COPY . .
 
 RUN npm ci
-RUN npm install @metric-atlas/cli
 
 RUN METRIC_ATLAS_ENABLED=true npm run build
 
