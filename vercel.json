@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/__metric-atlas/api/:path*",
+      "destination": "https://metric-atlas-homepage.fly.dev/__metric-atlas/api/:path*"
+    },
+    {
+      "source": "/__metric-atlas/dashboard",
+      "destination": "https://metric-atlas-homepage.fly.dev/__metric-atlas/dashboard"
+    },
+    {
+      "source": "/__metric-atlas/dashboard/:path*",
+      "destination": "https://metric-atlas-homepage.fly.dev/__metric-atlas/dashboard/:path*"
+    }
+  ]
+}
