@@ -2,18 +2,22 @@
   "rewrites": [
     {
       "source": "/__metric-atlas/api/:path*",
+      "has": [{ "type": "host", "value": "staging.metric-atlas.site" }],
       "destination": "https://metric-atlas-homepage.fly.dev/__metric-atlas/api/:path*"
     },
     {
       "source": "/__metric-atlas/dashboard",
+      "has": [{ "type": "host", "value": "staging.metric-atlas.site" }],
       "destination": "https://metric-atlas-homepage.fly.dev/__metric-atlas/dashboard"
     },
     {
       "source": "/__metric-atlas/dashboard/",
+      "has": [{ "type": "host", "value": "staging.metric-atlas.site" }],
       "destination": "https://metric-atlas-homepage.fly.dev/__metric-atlas/dashboard/"
     },
     {
       "source": "/__metric-atlas/dashboard/:path*",
+      "has": [{ "type": "host", "value": "staging.metric-atlas.site" }],
       "destination": "https://metric-atlas-homepage.fly.dev/__metric-atlas/dashboard/:path*"
     }
   ]
